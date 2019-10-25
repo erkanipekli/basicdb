@@ -345,6 +345,13 @@ class basicdb extends \PDO
             $this->showError($e);
         }
     }
+        
+    
+   public function totalRows()
+    {
+    $query = $this->query($this->sql);
+    return $query->rowCount();      
+    }
 
     public function lastId()
     {
